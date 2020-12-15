@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="{StaticResource PrimaryHeaderColor}"
+             x:Class="Tickets3.Views.StaffDetailsPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+            <Label Text="Name" TextColor="White" />
+            <Entry Text="{Binding Name}" TextColor="White" />
+            <Button Text="Save" Clicked="OnSaveClicked" />
+            <Button Text="Delete" Clicked="OnDeleteClicked" />
+            <Button Text="Cancel" Clicked="OnCancelClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:pages="clr-namespace:Tickets3.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+             x:Class="Tickets3.Views.SupervisorDashboardPage" 
+             NavigationPage.HasNavigationBar="False">
+    <NavigationPage Title="Clients" >
+        <x:Arguments>
+            <pages:ClientPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Staff" >
+        <x:Arguments>
+            <pages:StaffPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Work" >
+        <x:Arguments>
+            <pages:WorkPage />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

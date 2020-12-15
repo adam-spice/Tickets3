@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="{StaticResource PrimaryHeaderColor}"
+             NavigationPage.HasNavigationBar="False"
+             Title="Work"
+             x:Class="Tickets3.Views.WorkPage">
+    
+    <StackLayout VerticalOptions="Start">
+        <StackLayout  BackgroundColor="{StaticResource PrimaryHeaderColor}" Orientation="Horizontal" HorizontalOptions="Center" >
+            <Button Text="Sign Out" x:Name="ToolBarSignOutButton" Clicked="ToolBarSignOutButton_Clicked" />
+            <Button Text="Add Staff" Clicked="OnItemAdded" />
+        </StackLayout>
+        <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Client Name" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White" />
+            <Label Text="Staff Name" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White" />
+            <Label Text="Total Time" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White" />
+        </StackLayout>
+        <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding ClientName}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White" />
+                        <Label Text="{Binding StaffName}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White" />
+                        <Label Text="{Binding Total, StringFormat='{}{0:h\\:mm\\:ss}'}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="White" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+</ContentPage>

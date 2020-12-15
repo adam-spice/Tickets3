@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tickets3.App">
+    <Application.Resources>
+        <Color x:Key="PrimaryHeaderColor">#2296f3</Color>
+
+        <Style TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryHeaderColor}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="BorderColor" Value="White" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Application.Resources>
+</Application>

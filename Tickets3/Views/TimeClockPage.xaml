@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               BackgroundColor="{StaticResource PrimaryHeaderColor}"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="Tickets3.Views.TimeClockPage">
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout  BackgroundColor="{StaticResource PrimaryHeaderColor}" Orientation="Horizontal" HorizontalOptions="Center" >
+            <Button Text="Sign Out" x:Name="ToolBarSignOutButton" Clicked="ToolBarSignOutButton_Clicked" />
+        </StackLayout>
+        <StackLayout >
+            <StackLayout 
+                    Padding="20,50,20,5"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label x:Name="clientName" FontSize="50" HorizontalTextAlignment="Center"
+                        TextColor="White" />
+                <Label x:Name="runningTotalLabel"
+                        FontSize="50" HorizontalTextAlignment="Center"
+                        TextColor="White" />
+
+                <Button  x:Name="stopStartButton" Clicked="stopStartButton_Clicked"
+                        HorizontalOptions="Center" WidthRequest="200"
+                        />
+
+                <Button Text="Cancel"  x:Name="cancelButton" Clicked="cancelButton_Clicked"
+                        HorizontalOptions="Center" WidthRequest="200"
+                        />
+            </StackLayout>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
